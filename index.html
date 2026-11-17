@@ -167,6 +167,11 @@
 
     /* WHAT WE DO */
     #services { background: var(--sand); }
+    .bio-toggle { display: none; }
+    @media (max-width: 768px) {
+      .profile-body:not(.open) p:nth-of-type(n+2) { display: none; }
+      .bio-toggle { display: inline-block; margin-top: 4px; background: none; border: none; padding: 0; font-family: inherit; font-size: 0.78rem; font-weight: 600; color: var(--blue); letter-spacing: 0.06em; cursor: pointer; }
+    }
     .services-intro { font-size: 1rem; color: var(--muted); line-height: 1.9; max-width: 820px; margin-bottom: 48px; font-weight: 400; }
     .services-category-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--text); margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid rgba(75,174,214,0.2); }
     .services-category-title em { font-style: italic; color: var(--blue); }
@@ -495,6 +500,7 @@
             <p>With a background in dentistry and a postgraduate degree in Health and Hospital Management, she brings together clinical insight, organisational experience, and a strong people-centred approach. She has worked with Fortis Hospitals, Narayana Hrudayalaya Chain of Dental Clinics, Medi Assist, and currently IndusInd Insurance as a Product Trainer and Underwriter.</p>
             <p>Beyond corporate settings, her work extends into community and non-profit spaces — particularly with adolescents and young adults across India and Sri Lanka, through Janaagraha and Moksha Trust. She holds a Diploma in Counselling (Banjara Academy), and is a certified NLP Practitioner (AANLP), trained through Dale Carnegie's Train the Trainer programme.</p>
             <p>She works with individuals across life stages — adolescents, working professionals, and couples — offering a safe, inclusive, non-judgmental space for exploration and healing.</p>
+            <button class="bio-toggle" type="button" onclick="var b=this.parentNode;b.classList.toggle('open');this.textContent=b.classList.contains('open')?'Read less ↑':'Read more ↓';">Read more ↓</button>
           </div>
         </div>
         <div class="profile-card">
@@ -502,14 +508,15 @@
             <div class="profile-avatar">AM</div>
             <div class="profile-header-text">
               <h3>Anand Menon</h3>
-              <p>Counsellor · Career Coach · Trainer</p>
+              <p>Counsellor · Trainer · Entrepreneur</p>
             </div>
           </div>
           <div class="profile-body">
-            <p>Anand Menon is a counsellor, career coach, and trainer who is deeply curious about human behaviour, growth, and the inner worlds people carry. His work is grounded in empathy and the belief that clarity and self-understanding can transform the way individuals relate to themselves, their work, and their lives.</p>
+            <p>Anand Menon is an entrepreneur, counsellor, and life skills facilitator who is deeply curious about human behaviour, growth, and the inner worlds people carry. His work is grounded in empathy and the belief that clarity and self-understanding can transform the way individuals relate to themselves, their work, and their lives.</p>
             <p>He brings a rich professional background across multiple industries, including over a decade in senior leadership and C-suite positions. As a counsellor, Anand follows an eclectic approach — drawing from a range of psychological frameworks to support clients navigating challenges, transitions, and personal concerns.</p>
-            <p>A certified Career Analyst and Coach, he conducts workshops, training programmes, and consulting in Human Resources and organisational development. Committed to continuous learning, he actively invests in workshops across healing, mental health, and psychology, and is currently pursuing his Master's degree in Psychology.</p>
+            <p>A certified Career Counsellor, he conducts workshops, training programmes, and consulting in Human Resources and organisational development. Committed to continuous learning, he actively invests in workshops across healing, mental health, and psychology, and is currently pursuing his Master's degree in Psychology.</p>
             <p>His work sits at the intersection of personal wellbeing, career direction, and professional effectiveness — supporting individuals and organisations in creating meaningful change.</p>
+            <button class="bio-toggle" type="button" onclick="var b=this.parentNode;b.classList.toggle('open');this.textContent=b.classList.contains('open')?'Read less ↑':'Read more ↓';">Read more ↓</button>
           </div>
         </div>
       </div>
@@ -553,11 +560,12 @@
     <div class="section-inner">
       <h2 class="section-title fade-in">What We <em>Do</em></h2>
       <div class="section-divider fade-in"></div>
-      <p class="services-intro fade-in">We work with individuals and organisations through a holistic, client-centred approach — drawing from well-established frameworks including Person-Centred Therapy, CBT, and NLP. Everything we do is grounded in deep respect for people, confidentiality, and the belief that meaningful change takes time.</p>
+      <p class="services-intro fade-in">We work with individuals and organisations so they can be the best they can be — whatever the circumstances. We bring fresh perspectives, practical tools, and the space to grow.</p>
 
       <!-- ORGANISATIONAL DEVELOPMENT -->
       <div class="od-section">
       <h3 class="services-category-title fade-in"><em>Organisational</em> Development</h3>
+      <p class="training-intro fade-in">We partner with organisations to identify what stands between them and the growth and goals they seek. Starting with a gap analysis, we design and deliver what closes it — through training, culture work, leadership development and change support. We can run it ourselves, or train your people to carry it forward.</p>
       <div class="services-grid seven">
         <div class="service-card fade-in">
           <div class="service-icon">🎓</div>
@@ -663,6 +671,7 @@
 
       <!-- PERSONAL DEVELOPMENT -->
       <h3 class="services-category-title fade-in" style="margin-top:56px;"><em>Personal</em> Development</h3>
+      <p class="training-intro fade-in">We work with individuals, couples, families and young people, taking an eclectic approach that draws from well-established frameworks like Rogerian Person-Centred Therapy, CBT and NLP — tailored to what each person needs. We hold a safe space where you won't be judged, everything stays confidential, and you set the pace and the direction. Insight can come in a moment; lasting change takes time.</p>
       <div class="services-grid seven">
         <div class="service-card fade-in">
           <div class="service-icon">🧠</div>
@@ -900,7 +909,7 @@
       <img id="footer-logo" src="" alt="Raft"/>
       <span class="footer-brand-sub">Personal &amp; Organisational Development</span>
     </div>
-    <p>© 2025 Raft Services &nbsp;·&nbsp; <a href="mailto:info@raftservices.com">info@raftservices.com</a> &nbsp;·&nbsp; <a href="https://raftservices.com">raftservices.com</a></p>
+    <p>© Raft Services · Since 2022 &nbsp;·&nbsp; <a href="mailto:info@raftservices.com">info@raftservices.com</a> &nbsp;·&nbsp; <a href="https://raftservices.com">raftservices.com</a></p>
     <p style="margin-top:6px; font-size:0.72rem; opacity:0.4;">Bengaluru, India</p>
     <p style="margin-top:14px; font-size:0.72rem; opacity:0.45;">Designed &amp; Developed by <a href="http://www.crowldigital.com" target="_blank" rel="noopener" style="color:var(--blue-light); opacity:1;">Crowl Digital</a></p>
   </footer>
